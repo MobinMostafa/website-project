@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact me | Mobin Mostafa</title>
+
+    <!-- swiper slider cdn  -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <!-- font awesome cdn  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- main style  -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header flex justify-center align-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <div class="logo">
+                        <a href="#">
+                            <span><i class="fa-solid fa-laptop-code"></i></span>
+                            Mobin Mostafa
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6 flex align-center justify-end">
+                    <nav class="nav">
+                        <div class="menu flex align-center">
+                            <div class="nav-item"><a href="index.html" class="nav-link p-relative ">Home</a></div>
+                            <div class="nav-item"><a href="about.html" class="nav-link p-relative ">About</a></div>
+                            <div class="nav-item"><a href="#" class="nav-link p-relative ">Contact</a></div>
+                            <div class="theme-switch">
+                                <div class="theme-container">
+                                   <i class="fa-solid fa-moon"></i>
+
+                                </div>
+                             </div>
+                        </div>
+                    </nav>
+
+                </div>
+            </div>
+        </div>
+    </header>
+      <main>
+        <!-- about heading start  -->
+        <section class="about-heading">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 py-24 text-center">
+                        <h2 class="heading-lg">Contact Me</h2>
+                        <h3 class="heading-sub mt-16">
+                            <a href="#" class="home transition-3">
+                                <span>Home</span>
+                            </a>
+                            <a href="#" class="about">
+                                <span><i class="fa-solid fa-arrow-right"></i></span>
+                                Contact
+                            </a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+          <!-- about heading end  -->
+
+       <!-- contact section start  -->
+       <section class="contact-me">
+           <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <div class="contact-detail">
+                        <div class="contact">
+                            <div class="contact-left text-center">
+                                <span><i class="fa-solid fa-phone"></i></span>
+                            </div>
+                            <div class="contact-right">
+                                <h6>Call Me</h6>
+                                <p><a href="#">+8801640753985</a></p>
+                            </div>
+                        </div>
+                        <div class="contact my-40">
+                            <div class="contact-left text-center">
+                                <span><i class="fa-solid fa-envelope"></i></span>
+                            </div>
+                            <div class="contact-right">
+                                <h6>Email Me</h6>
+                                <p><a href="#">mobinmostafa@gmail.com</a></p>
+                            </div>
+                        </div>
+                        <div class="contact">
+                            <div class="contact-left text-center">
+                                <span><i class="fa-solid fa-location-dot"></i></span>
+                            </div>
+                            <div class="contact-right">
+                                <h6>Location</h6>
+                                <p>Dharmapur, Fatikchari, Chittagong. 4357</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 contact-form">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-6">
+                                <input type="text" placeholder="Name" required>
+                            </div>
+                            <div class="col-6">
+                                <input type="email" placeholder="Email" required>
+                            </div>
+                            <div class="col-12">
+                                <input type="text" placeholder="Subject" required>
+                            </div>
+                            <div class="col-12">
+                                <textarea name="" id="" cols="" rows="" placeholder="Message" required></textarea>
+                            </div>
+                            <div class="col-12 flex justify-end">
+                                <button class="btn btn-style">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+           </div>
+       </section>
+       <!-- contact section end -->
+      </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <div class="footer-left">
+                        <p>Designed by <a href="#">Mobin Mostafa</a></p>
+                    </div>
+                </div>
+                <div class="col-6 flex justify-end align-center">
+                    <div class="social-icon">
+                        <a href="#"><span><i class="fa-brands fa-square-facebook"></i></span></a>
+                        <a href="#"><span><i class="fa-brands fa-linkedin"></i></span></a>
+                        <a href="#"><span><i class="fa-brands fa-instagram"></i></span></a>
+                        <a href="#"><span><i class="fa-brands fa-twitter"></i></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- custom js  -->
+    <script>
+        // sticky header 
+window.onscroll = function() {stickyHeader()};
+let header = document.querySelector(".header");
+let sticky = header.offsetTop;
+
+function stickyHeader() {
+if (window.pageYOffset > sticky) {
+  header.classList.add("sticky");
+} else {
+  header.classList.remove("sticky");
+}
+}
+
+
+// dark/light theme js 
+const themeButton = document.querySelector('.theme-container');
+const themeIcon = document.querySelector('.fa-moon');
+
+
+
+
+themeButton.addEventListener('click', () => { 
+  if(themeIcon.classList.contains('fa-moon')){
+    themeIcon.classList.replace("fa-moon", "fa-sun")
+    document.body.classList.add('darkTheme')
+  }else{
+    themeIcon.classList.replace("fa-sun" , "fa-moon")
+    document.body.classList.remove('darkTheme')
+  }
+})
+
+    </script>
+</body>
+</html>
